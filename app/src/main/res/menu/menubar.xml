@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    tools:context="me.griffin.remoterobotcontroller.MainActivity">
+
+    <item
+        android:id="@+id/network_connected_icon"
+        android:icon="@drawable/network_connected"
+        android:title="network_connected_icon"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/connect_to_server"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Connect To Server"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/open_camera"
+        android:title="Open Connection to Camera"
+        app:showAsAction="never" />
+</menu>
