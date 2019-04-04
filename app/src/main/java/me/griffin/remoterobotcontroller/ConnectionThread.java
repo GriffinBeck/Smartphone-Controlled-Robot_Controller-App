@@ -192,7 +192,10 @@ public class ConnectionThread extends Thread {
 
     private void handleCommandIn(CommandPacket packet) throws IOException {
         if (Commands.REQUEST.equalTo(packet.getCmd())) {
-
+            if (CommandArguments.RESPONSE_AUTONOMOUS.equals(packet.getArg(0))) {
+                //CurrentCommandHolder.connectionAcceptingControls = !CurrentCommandHolder.connectionAcceptingControls;
+                CurrentCommandHolder.connectionAcceptingControls = false;
+            }
         } else if (Commands.PAUSE.equalTo(packet.getCmd())) {
             if (CommandArguments.PAUSE_PAUSECONNECTION.equals(packet.getArg(0))) {
                 CurrentCommandHolder.setAllowControls(false);

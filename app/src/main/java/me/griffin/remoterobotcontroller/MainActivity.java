@@ -139,6 +139,9 @@ public class MainActivity extends AppCompatActivity implements JoystickView.Joys
             case R.id.open_camera:
                 CurrentCommandHolder.addCommand(new CommandPacket(Commands.REQUEST, CommandArguments.REQUEST_IMG));
                 return true;
+            case R.id.autonmous_toggle:
+                CurrentCommandHolder.addCommand(new CommandPacket(Commands.REQUEST, CommandArguments.REQUEST_AUTONOMOUS));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -151,20 +154,6 @@ public class MainActivity extends AppCompatActivity implements JoystickView.Joys
         this.yPercent = yPercent;
         //Log.d("Main Method", "X percent: " + xPercent + " Y percent: " + yPercent);
     }
-
-    /*private void handleConnectButton() {
-        //Log.i("MAin Thread", "Handling Connect button");
-        String ip = ((EditText) findViewById(R.id.getIP)).getText().toString();
-        String portText = ((EditText) findViewById(R.id.getPort)).getText().toString();
-        int port = Integer.parseInt(portText);
-        connectionThread = new ConnectionThread(ip, port, this);
-        boolean didRun = connectionThread.connect();
-
-        if (didRun)
-            connectButton.setClickable(false);
-        else
-            ((TextView) findViewById(R.id.connectionError)).setText("Failed To Connect");
-    }*/
 
     private void openConnectionDialog() {
         //Log.e("Alert", "Creating alert");

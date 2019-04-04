@@ -20,4 +20,8 @@
         android:id="@+id/open_camera"
         android:title="Open Connection to Camera"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/autonmous_toggle"
+        android:title="Toggle Autonomous"
+        app:showAsAction="never"></item>
 </menu>

@@ -107,7 +107,7 @@ public class CurrentCommandHolder {
     }
 
     public static CommandPacket takeCommand() {
-        if (!cmds.isEmpty())
+        if (!cmds.isEmpty() && connectionAcceptingControls)
             return cmds.remove(0);
         return null;
     }
